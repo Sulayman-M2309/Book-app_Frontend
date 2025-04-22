@@ -1,0 +1,45 @@
+@import "tailwindcss"; 
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+/* Custom CSS variables */
+:root {
+  --color-primary: #d13c93;
+  --color-secondary: #0d0842;
+  --color-blackBG: #f3f3f3;
+  --color-favorite: #ff5841;
+
+  --font-primary: 'Montserrat', sans-serif;
+  --font-secondary: 'Nunito Sans', sans-serif;
+}
+
+/* Tailwind-based utility classes using CSS variables */
+.text-favorite {
+  color: var(--color-favorite);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+.bg-blackBG {
+  background-color: var(--color-blackBG);
+}
+.font-primary {
+  font-family: var(--font-primary);
+}
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+
+/* Button example */
+.btn-primary {
+  @apply px-6 py-2 rounded-md text-base font-bold cursor-pointer transition-all duration-200;
+  background-color: var(--color-primary);
+  font-family: var(--font-secondary);
+}
+.btn-primary:hover {
+  background-color: var(--color-secondary);
+  color: white;
+}
